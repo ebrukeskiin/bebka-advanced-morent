@@ -1,0 +1,171 @@
+@import "../../global.scss";
+
+.payment-container {
+  width: 100%;
+  max-width: 852px;
+  border-radius: 10px;
+  background-color: var(--white-color);
+  padding: 25px;
+}
+
+.payment-container h4 {
+  font-family: $primary-font;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a202c;
+  line-height: 30px;
+  margin: 0;
+}
+
+.payment-container-text {
+  display: flex;
+  justify-content: space-between;
+  font-family: $primary-font;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: var(--popular-car-color);
+}
+
+.payment-container-text p {
+  margin: 0;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+  padding-top: 30px;
+}
+
+.payment-option {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.option-first-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+#paymentVisa {
+  display: none;
+  transition: 10s ease-in-out;
+}
+
+#paymentPayPal {
+  display: none;
+  transition: ease-in-out;
+}
+
+#paymentBitcoin {
+  display: none;
+  transition: ease-in-out;
+}
+
+.radio-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.radio-input input {
+  width: 24px;
+  height: 24px;
+  transition: width 1 ease, height 1 ease;
+}
+
+/*input #creditCard :checked .payment-information{
+    display: flex;
+}*/
+
+.radio-input input:checked {
+  width: 16px;
+  height: 16px;
+}
+
+.radio-input label {
+  font-family: $primary-font;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1a202c;
+}
+
+.payment-information {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.left-payment-information {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card-holder {
+  text-transform: capitalize;
+}
+
+.left-payment-information span {
+  position: absolute;
+  top: 80px;
+  padding-left: 10px;
+  color: var(--red-color);
+  font-family: $primary-font;
+  font-size: 12px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.right-payment-information {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.information label {
+  font-family: $primary-font;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.information input {
+  display: flex;
+  width: 100%;
+  max-width: 330px;
+  background-color: var(--white-color);
+  color: var(--popular-car-color);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 16px;
+  font-family: $primary-font;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/*Responsiveness Start*/
+@media only screen and (max-width: 450px) {
+  .payment-information {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,291 @@
+@import "../../_global.scss";
+
+.card-container {
+  font-family: "Plus Jakarta Sans", serif;
+  background-color: var(--secondary-color);
+  display: flex;
+  border-radius: 10px;
+  max-width: 1310px;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 0px;
+  gap: 32px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.main-image-container {
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 10 / 9;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-left {
+  width: 100%;
+  color: var(--white-color);
+  max-width: 492px;
+  min-width: 345px;
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text-overlay {
+  position: relative;
+}
+
+.card-left h2 {
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: left;
+  max-width: 372px;
+}
+
+.card-left p {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  max-width: 284px;
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin-top: 24px;
+  height: 30%;
+}
+
+.car-small {
+  background-color: var(--primary-color);
+  max-width: 148px;
+  min-width: 30px;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.thumbnail {
+  max-width: 148px;
+  min-width: 30px;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.position {
+  position: absolute;
+  top: 20px;
+  padding: 10px;
+}
+
+.card-right {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  background: var(--white-color);
+  gap: 32px;
+  background: var(--white-color);
+  padding: 24px 24px 32px 24px;
+  min-width: 345px;
+  border-radius: 10px;
+}
+
+.review-star {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.title-review h3 {
+  text-align: left;
+}
+
+.title-review-heart {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-right h3 {
+  font-size: 32px;
+}
+
+.card-right .review {
+  font-size: 14px;
+  color: #666;
+}
+
+.card-right .stars {
+  color: #f39c12;
+  text-align: left;
+  width: 100px;
+}
+
+.card-right .heart {
+  width: 24px;
+  height: 24px;
+}
+
+.card-right p {
+  font-size: 20px;
+  color: var(--grey-color);
+  line-height: 40px;
+  text-align: left;
+}
+
+.card-right .details {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  font-size: 14px;
+  color: var(--popular-car-color);
+  text-align: left;
+}
+
+.card-right strong {
+  margin-left: 16px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+}
+
+.current-price {
+  font-weight: bold;
+  font-size: 28px;
+  color: var(--list-color);
+}
+
+.old-price {
+  font-size: 16px;
+  color: #999;
+  margin-left: 5px;
+  text-align: left;
+}
+
+.rent-button {
+  padding: 16px 32px;
+  font-size: 16px;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) and (min-width: 815px) {
+  .card-left h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .card-left p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .card-right p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .card-right .details {
+    font-size: 12px;
+  }
+  .current-price {
+    font-size: 20px;
+  }
+  .old-price {
+    font-size: 14px;
+  }
+  .rent-button {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+  .thumbnail-container {
+    gap: 16px;
+  }
+  .card-right h3 {
+    font-size: 28px;
+  }
+  .card-right {
+    justify-content: space-between;
+  }
+  .price-container {
+    padding-top: 28px;
+  }
+}
+
+@media (max-width: 815px) {
+  .card-container {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .card-left,
+  .card-right {
+    width: 100%;
+  }
+  .card-right {
+    padding: 16px;
+  }
+  .card-left h2 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .thumbnail-container {
+    gap: 8px;
+  }
+  .card-right h3 {
+    font-size: 18px;
+    text-align: left;
+  }
+  .card-right p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .card-right .review-star {
+    font-size: 12px;
+  }
+  .price-container {
+    padding-top: 18px;
+  }
+  .current-price {
+    font-size: 18px;
+  }
+  .old-price {
+    font-size: 12px;
+  }
+  .rent-button {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+  .car-small,
+  .thumbnail {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 33.33%;
+    height: auto;
+  }
+}

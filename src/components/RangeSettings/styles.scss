@@ -1,0 +1,166 @@
+@import "../../_global.scss";
+.container {
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1340px;
+  width: 100%;
+}
+.container input,
+.container select {
+  background-color: var(--white-color) !important;
+}
+
+.section {
+  background-color: var(--white-color);
+  padding: 15px;
+  border-radius: 8px;
+  width: 582px;
+  height: 132px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.fields {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: var(--list-color);
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.input-group select,
+.input-group input {
+  padding: 10px;
+  width: 130px;
+  border: 0px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  color: var(--popular-car-color);
+  background-color: #f9fafc;
+}
+
+.arrow-icon {
+  display: flex;
+  margin-left: 30px;
+  margin-right: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-icon button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 20px;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-icon button:hover {
+  background-color: #357ab8;
+}
+
+/* Responsive Ayarlar */
+@media (max-width: 1300px) {
+  .container {
+    gap: 15px;
+  }
+  .section {
+    width: 100%;
+    height: 100%;
+  }
+
+  .fields {
+    flex-direction: row;
+  }
+  .input-group select,
+  .input-group input {
+    width: 100%;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    gap: 10px;
+  }
+  .section {
+    width: 100%;
+    height: 100%;
+  }
+
+  .fields {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .input-group select,
+  .input-group input {
+    width: 100%;
+  }
+
+  .arrow-icon {
+    margin: -30px 0;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    flex-direction: column;
+    gap: 5px;
+    align-items: stretch;
+  }
+
+  .arrow-icon {
+    align-self: center;
+  }
+}
+
+.swapped {
+  order: -1;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fields {
+    gap: 7px;
+}
+
+  .arrow-icon {
+    align-self: center;
+  }
+
+}
+
+.swapped {
+  order: -1;
+}

@@ -1,0 +1,142 @@
+@import "../../_global.scss";
+
+.rental-info {
+  background-color: var(--white-color);
+  font-family: "Plus Jakarta Sans", serif;
+  width: 100%;
+  max-width: 852px;
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.rental-title {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    font-size: 14px;
+    color: var(--popular-car-color);
+  }
+}
+
+.section-title {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 600;
+  color: var(list-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  label {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+}
+
+.form-group-parent {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  select,
+  .date,
+  .time {
+    width: 386px;
+    height: 56px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 16px 32px;
+    color: var(--list-color);
+    background-color: var(--secondary-color);
+  }
+}
+
+@media (max-width: 915px) and (min-width: 768px) {
+  .rental-info {
+    margin: 32px 16px;
+    padding: 16px;
+    gap: 20px;
+    max-width: 730px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  .rental-title {
+    p {
+      font-size: 12px;
+    }
+  }
+  .form-section {
+    label {
+      font-size: 14px;
+    }
+    .form-group {
+      select,
+      .date,
+      .time {
+        width: 340px;
+        font-size: 12px;
+      }
+    }
+    .form-group-parent {
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .rental-info {
+    margin: 0 16px;
+    padding: 16px;
+    max-width: 327px;
+    gap: 20px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  .rental-title {
+    p {
+      font-size: 12px;
+    }
+  }
+  .form-section {
+    label {
+      font-size: 14px;
+    }
+    .form-group {
+      select,
+      .date,
+      .time {
+        width: 290px;
+        font-size: 12px;
+      }
+    }
+  }
+  .form-group-parent {
+    flex-direction: column;
+  }
+}

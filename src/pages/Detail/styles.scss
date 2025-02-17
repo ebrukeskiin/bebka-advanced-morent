@@ -1,0 +1,24 @@
+@import "../../_global.scss";
+
+.detail-page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 20px;
+}
+
+.popular-cars-detail-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.cars-container-detail-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  max-width: 1310px;
+  justify-content: center;
+}

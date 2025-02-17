@@ -1,0 +1,115 @@
+.dashboard-container {
+  width: 524px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+/* Kart alanı */
+.dashboard-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Grafik alanı */
+.chart-wrapper {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+}
+
+.chart-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.chart-total {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.chart-label {
+  font-size: 14px;
+  color: #666666;
+}
+
+/* Liste alanı */
+.dashboard-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.dashboard-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.list-value {
+  font-weight: bold;
+  color: #333333;
+}
+
+/* Responsive düzen */
+@media screen and (max-width: 480px) {
+  .dashboard-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .chart-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  .chart-total {
+    font-size: 20px;
+  }
+
+  .chart-label {
+    font-size: 12px;
+  }
+
+  .dashboard-list li {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .dashboard-container {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+}

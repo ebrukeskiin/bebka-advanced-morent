@@ -1,0 +1,64 @@
+$primary-color: hwb(225 21% 9%);
+$secondary-color: #f6f7f9;
+$white-color: #ffffff;
+$red-color: #ff4423;
+$gray-color: #596780;
+$yellow-color: #fbad39;
+$text-color: #13131399;
+$list-color: #1a202c;
+$divider-color: #13131329;
+$white-color: #ffffff;
+$popular-car-color: #90a3bf;
+
+// Temel değişken tanımları
+
+$primary-font: "Plus Jakarta Sans", sans-serif;
+$secondary-font: "Lato", sans-serif;
+$spacing-small: 12px;
+$spacing-medium: 24px;
+$spacing-large: 48px;
+
+// Tema renkleri
+// Light tema renkleri
+$light-theme-colors: (
+  "primary": #3563e9,
+  "secondary": #f6f7f9,
+  "white": #ffffff,
+  "text": #131313,
+  "divider": #e0e0e0,
+  "gray": #596780,
+  "yellow": #fbad39,
+  "list": #1a202c,
+  "popular-car": #90a3bf,
+  "background": #ffffff,
+);
+
+// Dark tema renkleri
+$dark-theme-colors: (
+  "primary": #1a73e8,
+  "secondary": #1a202c,
+  "white": #ffffff,
+  "text": #e0e0e0,
+  "divider": #3e3e3e,
+  "gray": #a0aec0,
+  "yellow": #fbad39,
+  "list": #e2e8f0,
+  "popular-car": #718096,
+  "background": #121212,
+);
+
+// Tema renklerini uygulayan mixin
+@mixin theme-colors($theme) {
+  @each $key, $value in $theme {
+    --#{$key}-color: #{$value};
+  }
+}
+
+// Light ve Dark tema sınıfları
+.light-theme {
+  @include theme-colors($light-theme-colors);
+}
+
+.dark-theme {
+  @include theme-colors($dark-theme-colors);
+}

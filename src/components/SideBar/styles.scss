@@ -1,0 +1,121 @@
+.sidebar {
+  position: absolute; /* Make the sidebar fixed to the left */
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+  z-index: 10000;
+
+  &.closed {
+    transform: translateX(-100%);
+  }
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex; /* Flexbox layout for icon and text alignment */
+      align-items: center;
+      padding: 10px 0;
+      font-size: 0.9rem;
+      color: #666;
+      cursor: pointer;
+      transition: color 0.2s ease-in;
+
+      &:hover {
+        color: #2d89ff;
+      }
+
+      &.active {
+        font-weight: bold;
+        color: #2d89ff;
+      }
+    }
+  }
+
+  .logout-button {
+    background-color: #2d89ff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover {
+      background-color: #1d5ab6;
+    }
+  }
+
+  .toggle-button {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+    padding: 15px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    span {
+      font-size: 30px;
+      color: #333;
+      transition: transform 0.3s ease;
+
+      &.open {
+        transform: rotate(180deg);
+      }
+
+      &.closed {
+        transform: rotate(0deg);
+      }
+    }
+
+    &:hover {
+      background-color: #f1f1f1;
+    }
+  }
+}
+
+/* Ensure the content is not overlapped by the sidebar */
+.main-content {
+  &.sidebar-closed {
+    margin-left: 0; /* When sidebar is closed, content takes full width */
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../_global.scss";
+
+.category-page {
+  position: relative;
+}
+
+.recomendation-cars-category {
+  justify-content: center;
+  margin: 0 100px;
+}
+
+.cars-container-category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  // max-width: 1310px;
+  justify-content: center;
+}

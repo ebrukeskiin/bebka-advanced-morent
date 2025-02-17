@@ -1,0 +1,140 @@
+@import "../../_global.scss";
+
+.review-list {
+  width: 100%;
+  max-width: 1310px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  justify-content: center;
+}
+
+.review-list h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--list-color);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-list .review-count {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.review-stars {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+
+.review-date {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  font-size: 12px;
+  color: #888;
+}
+
+.review {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--divider-color);
+  position: relative;
+  justify-content: center;
+}
+
+.review:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.review-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.review-info {
+  flex: 1;
+  position: relative;
+}
+
+.review-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--list-color);
+}
+
+.review-info p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.review-info p:first-of-type {
+  font-weight: 500;
+  color: #888;
+}
+
+.review-list button {
+  display: block;
+  margin: 20px auto;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: var(--popular-car-color);
+  background-color: #fff !important;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.review-list button:hover {
+  color: #223b5b;
+  background-color: #fff !important;
+}
+
+.review-info p:last-of-type {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .review-info p:last-of-type {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  .review-info p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .review-info p:last-of-type {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+  .review-info p {
+    font-size: 11px;
+  }
+}

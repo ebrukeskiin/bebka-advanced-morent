@@ -1,0 +1,149 @@
+@import "../../_global.scss";
+.billing-info {
+  background-color: #ffffff;
+  font-family: "Plus Jakarta Sans", serif;
+  width: 100%;
+  max-width: 852px;
+  border-radius: 10px;
+  // margin: 32px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.billing-title {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    font-size: 14px;
+    color: #90a3bf;
+  }
+}
+
+.section-title {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 600;
+  color: #1a202c;
+  display: flex;
+  gap: 8px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  label {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+}
+
+.form-group-parent {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  input {
+    width: 386px;
+    height: 56px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 16px 32px;
+    color: #90a3bf;
+    background-color: #f6f7f9;
+  }
+
+  &.right-align input {
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
+.form-group-left,
+.form-group-right {
+  width: 48%;
+}
+.form-group-left label,
+.form-group-right label {
+  margin-top: 10px;
+}
+
+@media (max-width: 915px) and (min-width: 768px) {
+  .billing-info {
+    margin: 32px 16px;
+    padding: 16px;
+    gap: 20px;
+    max-width: 730px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  .billing-title {
+    p {
+      font-size: 12px;
+    }
+  }
+  .form-section {
+    label {
+      font-size: 14px;
+    }
+    .form-group {
+      input {
+        width: 340px;
+        font-size: 12px;
+      }
+    }
+    .form-group-parent {
+      gap: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .billing-info {
+    margin: 32px 16px;
+    padding: 16px;
+    max-width: 327px;
+    gap: 20px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  .billing-title {
+    p {
+      font-size: 12px;
+    }
+  }
+  .form-section {
+    label {
+      font-size: 14px;
+    }
+    .form-group {
+      input {
+        width: 290px;
+        font-size: 12px;
+      }
+    }
+  }
+  .form-group-parent {
+    flex-direction: column;
+  }
+}

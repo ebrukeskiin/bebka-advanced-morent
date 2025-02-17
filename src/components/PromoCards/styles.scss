@@ -1,0 +1,79 @@
+@import "../../_global.scss";
+
+.card {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  border-radius: 12px;
+  padding: 20px;
+  color: $secondary-color;
+  width: 640px;
+  height: 360px;
+  position: relative;
+}
+.card-content {
+  width: 284px;
+  height: auto;
+  padding: 20px;
+  p {
+    color: white;
+  }
+}
+.card-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.card-description {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.card-button {
+  color: $white-color;
+  width: 120px;
+  height: 44px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.card-image {
+  position: absolute;
+  max-width: 758px;
+  height: 360px;
+  bottom: 0;
+  left: 0;
+}
+@media (max-width: 660px) {
+  .card {
+    width: 327px;
+    height: 232px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .card-content {
+    width: 100%;
+    padding: 10px;
+    margin-top: -5px;
+  }
+  .card-title {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .card-description {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  .card-button {
+    width: 128px;
+    height: 34px;
+    font-size: 14px;
+  }
+  .card-image {
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -80px;
+    position: static;
+  }
+}

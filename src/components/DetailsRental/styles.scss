@@ -1,0 +1,179 @@
+.details-rental {
+  display: flex;
+  flex-direction: column;
+  max-width: 534px;
+  width: 100%; 
+  height: auto; 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  box-sizing: border-box;
+  margin: 0 auto; 
+
+  .map-container {
+    height: 276px;
+    width: 100%;
+    max-width: 486px;
+    margin-top: 48px;
+    border-radius: 10px;
+    background-color: #eaeaea;
+  }
+
+  .rental-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .car-info {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      align-items: center;
+      justify-content: flex-start;
+
+      img {
+        width: 116px;
+        height: 36px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .car-text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        h3 {
+          margin: 0;
+          font-size: 1.2rem;
+          text-align: left;
+        }
+
+        p {
+          margin: 0;
+          color: #666;
+          font-size: 1rem;
+          text-align: left;
+        }
+      }
+    }
+
+    .img {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 132px;
+      height: 72px;
+      background-color: #3563e9;
+      border-radius: 10px;
+    }
+
+    .rental-dates {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .total-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 70px;
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #2d89ff;
+    }
+  }
+}
+
+/* Responsive Ayarlar */
+@media (max-width: 768px) {
+  .details-rental {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .map-container {
+    height: 200px;
+  }
+
+  .rental-details {
+    .car-info {
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+
+      img {
+        width: 116px;
+        height: 36px;
+      }
+    }
+
+    .img {
+      width: 132px;
+      height: 72px;
+    }
+  }
+
+  .total-price {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .details-rental {
+    padding: 10px;
+  }
+
+  .map-container {
+    height: 150px;
+  }
+
+  .rental-details {
+    .car-info {
+      flex-direction: row;
+      gap: 10px;
+
+      img {
+        width: 100px;
+        height: 30px;
+      }
+
+      .car-text {
+        h3 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  .total-price {
+    flex-direction: column;
+    align-items: flex-start;
+    h2 {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}

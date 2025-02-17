@@ -1,0 +1,35 @@
+.dashboard-page {
+  display: flex;
+  max-width: 1310px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Plus Jakarta Sans", serif;
+}
+
+.main-content {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.left-section,
+.right-section {
+  flex: 1;
+  gap: 20px;
+}
+
+.left-section {
+  display: flex;
+  justify-content: center;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+}
